@@ -1,0 +1,51 @@
+ATM DEMO
+
+A quick and dirty demo project incorporating a lot of freshly learned lessons about python and MongoDB.
+
+While the accounts are persisted, the contents of the machine is not, so ending and restarting the application will refill the machine 
+with $10,000.
+
+All logs are output to runtime.log in the runtime directory.
+
+
+INSTRUCTIONS FOR RUNNING WITH DOCKER    
+Docker dependencies:
+    docker
+
+Running the program from docker:
+    The docker container is not checked into dockerhub so run the following from a terminal in same
+    directory as the Dockerfile.
+    
+	docker build --tag atmdemo:1.0 .
+
+After the build is succesful start the container and expose the necessary ports.
+
+	docker run -it -d --name atmdemo atmdemo:1.0 /bin/bash
+
+Finally, you may attach into the container and run the program
+
+	docker container exec -it atmdemo /bin/bash
+	cd /demo
+	python3 main.py
+
+INSTRUCTIONS FOR RUNNING NATIVELY    
+Native runtime Dependencies:
+    python 3.x
+    pymongo
+    dnspython
+
+To install native dependencies, please first install python 3.x then run the following from
+a terminal with install rights:
+    pip install pymongo dsnpython
+    
+Running the program natively:
+    you may start the program natively by running python|python3 main.py
+    
+
+
+if you would like to run the test file you may run:
+	
+	python3 Tests.py
+
+
+ 

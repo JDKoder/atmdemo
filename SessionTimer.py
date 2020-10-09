@@ -18,9 +18,9 @@ class SessionTimer(Thread):
         while not self.stopped.wait(self.interval_seconds):
             self.logger.debug("session interval elapsed")
             if self.reset is False:
-                println("Your account has been logged out due to inactivity.")
+                print("\nYour session has expired due to inactivity.")
                 self.auth_svc.logout()
-                println("Please press enter to continue.")
+                print("Please press enter to continue.")
                 self.stopped.set()
         if self.reset:
             self.logger.debug("session timer refreshed")

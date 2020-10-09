@@ -25,17 +25,21 @@ class AccountOperations:
 
 
     def balance(self, args=None):
+        return_balance_str = ""
         self.logger.debug("Entering balance")
         acct = self.authorization_svc.get_active_account()
         self.logger.debug("Found account:" + str(acct))
         if acct is not None and "balance" in acct:
             balance_str = self.pretty_money(Decimal(str(acct.get("balance"))))
             self.logger.debug("printing account balance:" + balance_str)            
-            print("Current balance: " + balance_str)        
+            return_balance_str = "Current balance: " + balance_str
+            print(return_balance_str)        
         else:
-            print("balance not found.")
+            return_balance_str = "balance not found."
+            print(return_balance_str)
             self.logger.debug("balance not found on acct.")
         self.logger.debug("Exiting balance")
+        return return_balance_str
 
 
     def withdraw(self, args):
@@ -66,6 +70,9 @@ class AccountOperations:
             elif acct_bal - withdraw_dec < 20:
                 self.logger.info("Account has become overdrawn.")
                 overdrawn = True
+                if(acct_bal - withdraw_dec < 0):
+                    withdraw_dec = acct_bal - acct_bal % 20
+                    print("adjusting withdraw_dec to " + self.pretty_money(withdraw_dec))
             final_balance = acct_bal - withdraw_dec
             pretty_final = self.pretty_money(final_balance)
             final_balance_dec128 = Decimal128(str(final_balance))
@@ -74,9 +81,12 @@ class AccountOperations:
             if self.account_data_svc.save_transaction(aid, final_balance_dec128):
                 self.logger.info("Withdrawal successful for account: " + str(aid))
                 self.machine.pay_out(withdraw_dec)
+                print("Amount dispensed: " + self.pretty_money(withdraw_dec))
+                
                 self.account_data_svc.update_history(aid, pretty_withdraw, pretty_final)
                 self.authorization_svc.refresh(aid)
                 account = self.authorization_svc.get_active_account()
+                self.balance()
             if overdrawn:
                 self.logger.info("Charging overdraft fee of $5")
                 acct_bal = Decimal(str(account.get("balance"))) - 5

@@ -19,7 +19,7 @@ def call(func, args):
 
 def start():
     
-    SESSION_INTERVAL = 120 #session length resets to 2 minutes whenever input is received.
+    SESSION_TIMEOUT = 120 #session length is 2 minutes.
     session_timer = None
     """entrypoint to atm demo.  Initializes services and begins the main program loop"""   
 
@@ -35,7 +35,7 @@ def start():
             if session_timer is not None and session_timer.is_alive():
                 session_timer.ref()
             else:
-                session_timer = SessionTimer(SESSION_INTERVAL, auth_svc)
+                session_timer = SessionTimer(SESSION_TIMEOUT, auth_svc)
                 session_timer.start()
         
         #prompt the user for a command and split the input so we have all arguments
@@ -48,6 +48,7 @@ def start():
         cmd = "" if len(args) == 0 else args[0].lower();
         logger.debug("command parsed to" + cmd)
        
+        #I realize writing it constant == var is yoda speak, but I find it easier to quickly read through.
         if "end" == cmd:
             logger.debug("End command received, breaking out of main loop")
             break
@@ -72,7 +73,7 @@ def start():
                 if cmd in commands:
                     call(commands.get(cmd), args)
         logger.debug("Exited main program loop.")
-    
+    session_timer.kill()
     print("The application is now terminating.")
 
 if __name__=='__main__':
