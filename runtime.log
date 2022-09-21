@@ -1,0 +1,1071 @@
+2020-10-09 10:22:45,680 - DEBUG - AccountMongoDBService - Initialized logger for AccountMongoDBService
+2020-10-09 10:22:45,832 - DEBUG - Authorization - Initialized logger for Authorization
+2020-10-09 10:22:45,832 - DEBUG - AccountOperations - Initialized logger for AccountOperations
+2020-10-09 10:22:45,832 - DEBUG - main - Application Started.
+2020-10-09 10:22:45,833 - DEBUG - main - Entering main loop
+2020-10-09 10:22:51,347 - DEBUG - main - user entered args at prompt authorize
+2020-10-09 10:22:51,347 - DEBUG - main - command parsed toauthorize
+2020-10-09 10:22:51,347 - INFO - main - authorizing with input['authorize']
+2020-10-09 10:22:51,347 - DEBUG - main - Exited main program loop.
+2020-10-09 10:22:57,611 - DEBUG - main - user entered args at prompt authorize 0123456789
+2020-10-09 10:22:57,617 - DEBUG - main - command parsed toauthorize
+2020-10-09 10:22:57,618 - INFO - main - authorizing with input['authorize', '0123456789']
+2020-10-09 10:22:57,618 - DEBUG - main - Exited main program loop.
+2020-10-09 10:23:07,786 - DEBUG - main - user entered args at prompt authorize 1234567890 1234
+2020-10-09 10:23:07,787 - DEBUG - main - command parsed toauthorize
+2020-10-09 10:23:07,787 - INFO - main - authorizing with input['authorize', '1234567890', '1234']
+2020-10-09 10:23:07,787 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 10:23:07,787 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 10:23:07,787 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 10:23:07,787 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 10:23:07,965 - INFO - Authorization - Authorization failed.
+2020-10-09 10:23:07,966 - DEBUG - Authorization - Exiting attempt_auth
+2020-10-09 10:23:07,966 - DEBUG - main - Exited main program loop.
+2020-10-09 10:23:59,386 - DEBUG - main - user entered args at prompt 1434597300 4557
+2020-10-09 10:23:59,387 - DEBUG - main - command parsed to1434597300
+2020-10-09 10:23:59,387 - DEBUG - main - Exited main program loop.
+2020-10-09 10:24:15,195 - DEBUG - main - user entered args at prompt authorize 1434597300 4557
+2020-10-09 10:24:15,195 - DEBUG - main - command parsed toauthorize
+2020-10-09 10:24:15,195 - INFO - main - authorizing with input['authorize', '1434597300', '4557']
+2020-10-09 10:24:15,195 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 10:24:15,195 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 10:24:15,196 - INFO - AccountMongoDBService - finding account with params{'account_id': '1434597300', 'pin': '4557'}
+2020-10-09 10:24:15,196 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 10:24:15,232 - INFO - Authorization - Successfully authorized: {'_id': ObjectId('5f7894ff00fefe5eff0b92dd'), 'account_id': '1434597300', 'pin': '4557', 'balance': Decimal128('90000.55000')}
+2020-10-09 10:24:15,232 - DEBUG - Authorization - Exiting attempt_auth
+2020-10-09 10:24:15,232 - DEBUG - main - Exited main program loop.
+2020-10-09 10:24:15,232 - DEBUG - SessionTimer - initializing session timer: interval[120]
+2020-10-09 10:24:15,233 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:24:18,259 - DEBUG - main - user entered args at prompt balance
+2020-10-09 10:24:18,259 - DEBUG - main - command parsed tobalance
+2020-10-09 10:24:18,259 - DEBUG - AccountOperations - Entering balance
+2020-10-09 10:24:18,259 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7894ff00fefe5eff0b92dd'), 'account_id': '1434597300', 'pin': '4557', 'balance': Decimal128('90000.55000')}
+2020-10-09 10:24:18,259 - DEBUG - AccountOperations - printing account balance:$90000.55
+2020-10-09 10:24:18,260 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 10:24:18,260 - DEBUG - main - Exited main program loop.
+2020-10-09 10:24:18,260 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 10:24:18,260 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 10:24:18,260 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:24:21,011 - DEBUG - main - user entered args at prompt history
+2020-10-09 10:24:21,011 - DEBUG - main - command parsed tohistory
+2020-10-09 10:24:21,011 - DEBUG - AccountOperations - Entering history
+2020-10-09 10:24:21,011 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7894ff00fefe5eff0b92dd'), 'account_id': '1434597300', 'pin': '4557', 'balance': Decimal128('90000.55000')}
+2020-10-09 10:24:21,011 - DEBUG - AccountMongoDBService - Entering find_account_hist_by_account_id
+2020-10-09 10:24:21,011 - INFO - AccountMongoDBService - finding account history by account id: 1434597300
+2020-10-09 10:24:21,012 - DEBUG - AccountMongoDBService - Exiting find_account_hist_by_account_id
+2020-10-09 10:24:21,037 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f7c80a2bee9dc69019965b1'), 'account_id': '1434597300', 'date': '2020-10-05', 'time': '00:00:00', 'amount': '$90000.55', 'balance': '$90000.55', 'created_date': datetime.datetime(2020, 10, 5, 4, 0)}
+2020-10-09 10:24:21,037 - DEBUG - AccountOperations - Exiting history
+2020-10-09 10:24:21,037 - DEBUG - main - Exited main program loop.
+2020-10-09 10:24:21,037 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 10:24:21,037 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 10:24:21,038 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:24:32,835 - DEBUG - main - user entered args at prompt logout
+2020-10-09 10:24:32,835 - DEBUG - main - command parsed tologout
+2020-10-09 10:24:32,835 - DEBUG - Authorization - Entering logout
+2020-10-09 10:24:32,836 - INFO - Authorization - Account 1434597300 logged out.
+2020-10-09 10:24:32,836 - DEBUG - Authorization - exiting logout
+2020-10-09 10:24:32,836 - DEBUG - main - Exited main program loop.
+2020-10-09 10:24:51,595 - DEBUG - main - user entered args at prompt authorize 2001377812 5950
+2020-10-09 10:24:51,595 - DEBUG - main - command parsed toauthorize
+2020-10-09 10:24:51,595 - INFO - main - authorizing with input['authorize', '2001377812', '5950']
+2020-10-09 10:24:51,595 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 10:24:51,595 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 10:24:51,595 - INFO - AccountMongoDBService - finding account with params{'account_id': '2001377812', 'pin': '5950'}
+2020-10-09 10:24:51,596 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 10:24:51,626 - INFO - Authorization - Successfully authorized: {'_id': ObjectId('5f78957000fefe5eff0b92df'), 'account_id': '2001377812', 'pin': '5950', 'balance': Decimal128('60.00000')}
+2020-10-09 10:24:51,626 - DEBUG - Authorization - Exiting attempt_auth
+2020-10-09 10:24:51,626 - DEBUG - main - Exited main program loop.
+2020-10-09 10:24:51,626 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 10:24:51,626 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 10:24:51,627 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:24:59,387 - DEBUG - main - user entered args at prompt balance
+2020-10-09 10:24:59,387 - DEBUG - main - command parsed tobalance
+2020-10-09 10:24:59,387 - DEBUG - AccountOperations - Entering balance
+2020-10-09 10:24:59,387 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f78957000fefe5eff0b92df'), 'account_id': '2001377812', 'pin': '5950', 'balance': Decimal128('60.00000')}
+2020-10-09 10:24:59,387 - DEBUG - AccountOperations - printing account balance:$60.00
+2020-10-09 10:24:59,388 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 10:24:59,388 - DEBUG - main - Exited main program loop.
+2020-10-09 10:24:59,388 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 10:24:59,388 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 10:24:59,388 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:25:01,922 - DEBUG - main - user entered args at prompt history
+2020-10-09 10:25:01,923 - DEBUG - main - command parsed tohistory
+2020-10-09 10:25:01,923 - DEBUG - AccountOperations - Entering history
+2020-10-09 10:25:01,923 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f78957000fefe5eff0b92df'), 'account_id': '2001377812', 'pin': '5950', 'balance': Decimal128('60.00000')}
+2020-10-09 10:25:01,923 - DEBUG - AccountMongoDBService - Entering find_account_hist_by_account_id
+2020-10-09 10:25:01,923 - INFO - AccountMongoDBService - finding account history by account id: 2001377812
+2020-10-09 10:25:01,923 - DEBUG - AccountMongoDBService - Exiting find_account_hist_by_account_id
+2020-10-09 10:25:01,953 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f7c80e0bee9dc69019965b3'), 'account_id': '2001377812', 'date': '2020-10-05', 'time': '00:00:00', 'amount': '$60.00', 'balance': '$60.00', 'created_date': datetime.datetime(2020, 10, 5, 4, 0)}
+2020-10-09 10:25:01,954 - DEBUG - AccountOperations - Exiting history
+2020-10-09 10:25:01,954 - DEBUG - main - Exited main program loop.
+2020-10-09 10:25:01,954 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 10:25:01,954 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 10:25:01,955 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:27:01,956 - DEBUG - SessionTimer - session interval elapsed
+2020-10-09 10:45:40,588 - DEBUG - AccountMongoDBService - Initialized logger for AccountMongoDBService
+2020-10-09 10:45:40,670 - DEBUG - Authorization - Initialized logger for Authorization
+2020-10-09 10:45:40,670 - DEBUG - AccountOperations - Initialized logger for AccountOperations
+2020-10-09 10:45:40,670 - DEBUG - main - Application Started.
+2020-10-09 10:45:40,671 - DEBUG - main - Entering main loop
+2020-10-09 10:46:16,123 - DEBUG - main - user entered args at prompt authorize 1234567890 1234
+2020-10-09 10:46:16,123 - DEBUG - main - command parsed toauthorize
+2020-10-09 10:46:16,123 - INFO - main - authorizing with input['authorize', '1234567890', '1234']
+2020-10-09 10:46:16,124 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 10:46:16,124 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 10:46:16,124 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 10:46:16,125 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 10:46:16,313 - INFO - Authorization - Authorization failed.
+2020-10-09 10:46:16,313 - DEBUG - Authorization - Exiting attempt_auth
+2020-10-09 10:46:16,314 - DEBUG - main - Exited main program loop.
+2020-10-09 10:46:45,435 - DEBUG - main - user entered args at prompt authorize 1234567890 1234
+2020-10-09 10:46:45,435 - DEBUG - main - command parsed toauthorize
+2020-10-09 10:46:45,436 - INFO - main - authorizing with input['authorize', '1234567890', '1234']
+2020-10-09 10:46:45,436 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 10:46:45,436 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 10:46:45,437 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 10:46:45,437 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 10:46:45,461 - INFO - Authorization - Authorization failed.
+2020-10-09 10:46:45,461 - DEBUG - Authorization - Exiting attempt_auth
+2020-10-09 10:46:45,461 - DEBUG - main - Exited main program loop.
+2020-10-09 10:47:19,923 - DEBUG - main - user entered args at prompt authorize 1234567890 1234
+2020-10-09 10:47:19,924 - DEBUG - main - command parsed toauthorize
+2020-10-09 10:47:19,924 - INFO - main - authorizing with input['authorize', '1234567890', '1234']
+2020-10-09 10:47:19,924 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 10:47:19,925 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 10:47:19,925 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 10:47:19,925 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 10:47:19,951 - INFO - Authorization - Successfully authorized: {'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('0.00000')}
+2020-10-09 10:47:19,952 - DEBUG - Authorization - Exiting attempt_auth
+2020-10-09 10:47:19,952 - DEBUG - main - Exited main program loop.
+2020-10-09 10:47:19,952 - DEBUG - SessionTimer - initializing session timer: interval[120]
+2020-10-09 10:47:19,953 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:47:23,395 - DEBUG - main - user entered args at prompt history
+2020-10-09 10:47:23,395 - DEBUG - main - command parsed tohistory
+2020-10-09 10:47:23,395 - DEBUG - AccountOperations - Entering history
+2020-10-09 10:47:23,395 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('0.00000')}
+2020-10-09 10:47:23,395 - DEBUG - AccountMongoDBService - Entering find_account_hist_by_account_id
+2020-10-09 10:47:23,395 - INFO - AccountMongoDBService - finding account history by account id: 1234567890
+2020-10-09 10:47:23,395 - DEBUG - AccountMongoDBService - Exiting find_account_hist_by_account_id
+2020-10-09 10:47:23,417 - DEBUG - AccountOperations - Exiting history
+2020-10-09 10:47:23,417 - DEBUG - main - Exited main program loop.
+2020-10-09 10:47:23,417 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 10:47:23,417 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 10:47:23,418 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:47:30,035 - DEBUG - main - user entered args at prompt deposite 1000
+2020-10-09 10:47:30,035 - DEBUG - main - command parsed todeposite
+2020-10-09 10:47:30,035 - DEBUG - AccountOperations - Entering desposite
+2020-10-09 10:47:30,036 - DEBUG - AccountMongoDBService - Entering save_transaction
+2020-10-09 10:47:30,036 - INFO - AccountMongoDBService - Saving account balance [1000.00000] for account [1234567890]
+2020-10-09 10:47:30,071 - INFO - AccountOperations - Deposite succesful for account: 1234567890
+2020-10-09 10:47:30,071 - DEBUG - Authorization - Entering refresh
+2020-10-09 10:47:30,071 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 10:47:30,071 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 10:47:30,071 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 10:47:30,093 - DEBUG - Authorization - Exiting refresh
+2020-10-09 10:47:30,093 - DEBUG - AccountOperations - Entering balance
+2020-10-09 10:47:30,093 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('1000.00000')}
+2020-10-09 10:47:30,093 - DEBUG - AccountOperations - printing account balance:$1000.00
+2020-10-09 10:47:30,093 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 10:47:30,094 - DEBUG - AccountMongoDBService - Entering update_history
+2020-10-09 10:47:30,094 - DEBUG - AccountMongoDBService - splitting current_time_str on space: 2020-10-09 14:47:30
+2020-10-09 10:47:30,094 - DEBUG - AccountMongoDBService - datetime_arr: ['2020-10-09', '14:47:30']
+2020-10-09 10:47:30,094 - INFO - AccountMongoDBService - Inserting to account_history for account 1234567890
+2020-10-09 10:47:30,094 - DEBUG - AccountMongoDBService - insert payload: {'account_id': '1234567890', 'date': '2020-10-09', 'time': '14:47:30', 'amount': '$1000.00', 'balance': '$1000.00', 'created_date': datetime.datetime(2020, 10, 9, 14, 47, 30, 94026, tzinfo=datetime.timezone.utc)}
+2020-10-09 10:47:30,118 - DEBUG - AccountMongoDBService - account_history insert complete with response5f8078025ac2737624b6f9a5
+2020-10-09 10:47:30,118 - DEBUG - AccountMongoDBService - Exiting update_history
+2020-10-09 10:47:30,119 - DEBUG - AccountOperations - Exiting desposite
+2020-10-09 10:47:30,119 - DEBUG - main - Exited main program loop.
+2020-10-09 10:47:30,119 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 10:47:30,119 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 10:47:30,119 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:47:36,235 - DEBUG - main - user entered args at prompt withdraw 50
+2020-10-09 10:47:36,235 - DEBUG - main - command parsed towithdraw
+2020-10-09 10:47:36,235 - DEBUG - AccountOperations - Entering withdraw
+2020-10-09 10:47:36,236 - DEBUG - AccountOperations - valid input
+2020-10-09 10:47:36,236 - DEBUG - main - Exited main program loop.
+2020-10-09 10:47:36,236 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 10:47:36,236 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 10:47:36,236 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:47:50,459 - DEBUG - main - user entered args at prompt withdraw 60.1
+2020-10-09 10:47:50,459 - DEBUG - main - command parsed towithdraw
+2020-10-09 10:47:50,459 - DEBUG - AccountOperations - Entering withdraw
+2020-10-09 10:47:50,459 - DEBUG - AccountOperations - valid input
+2020-10-09 10:47:50,459 - DEBUG - main - Exited main program loop.
+2020-10-09 10:47:50,459 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 10:47:50,460 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 10:47:50,460 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:47:58,699 - DEBUG - main - user entered args at prompt withdraw -60
+2020-10-09 10:47:58,699 - DEBUG - main - command parsed towithdraw
+2020-10-09 10:47:58,699 - DEBUG - AccountOperations - Entering withdraw
+2020-10-09 10:47:58,699 - DEBUG - AccountOperations - invalid input
+2020-10-09 10:47:58,699 - DEBUG - AccountOperations - Exiting withdraw
+2020-10-09 10:47:58,699 - DEBUG - main - Exited main program loop.
+2020-10-09 10:47:58,699 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 10:47:58,699 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 10:47:58,700 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:48:07,291 - DEBUG - main - user entered args at prompt withdraw evil
+2020-10-09 10:48:07,291 - DEBUG - main - command parsed towithdraw
+2020-10-09 10:48:07,291 - DEBUG - AccountOperations - Entering withdraw
+2020-10-09 10:48:07,291 - DEBUG - AccountOperations - invalid input
+2020-10-09 10:48:07,292 - DEBUG - AccountOperations - Exiting withdraw
+2020-10-09 10:48:07,292 - DEBUG - main - Exited main program loop.
+2020-10-09 10:48:07,292 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 10:48:07,292 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 10:48:07,292 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:48:12,468 - DEBUG - main - user entered args at prompt withraw 1e
+2020-10-09 10:48:12,468 - DEBUG - main - command parsed towithraw
+2020-10-09 10:48:12,468 - DEBUG - main - Exited main program loop.
+2020-10-09 10:48:12,468 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 10:48:12,468 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 10:48:12,468 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:48:16,763 - DEBUG - main - user entered args at prompt balance
+2020-10-09 10:48:16,763 - DEBUG - main - command parsed tobalance
+2020-10-09 10:48:16,763 - DEBUG - AccountOperations - Entering balance
+2020-10-09 10:48:16,763 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('1000.00000')}
+2020-10-09 10:48:16,763 - DEBUG - AccountOperations - printing account balance:$1000.00
+2020-10-09 10:48:16,763 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 10:48:16,763 - DEBUG - main - Exited main program loop.
+2020-10-09 10:48:16,763 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 10:48:16,764 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 10:48:16,764 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:48:22,435 - DEBUG - main - user entered args at prompt withdraw 1e
+2020-10-09 10:48:22,435 - DEBUG - main - command parsed towithdraw
+2020-10-09 10:48:22,435 - DEBUG - AccountOperations - Entering withdraw
+2020-10-09 10:48:22,435 - DEBUG - AccountOperations - invalid input
+2020-10-09 10:48:22,436 - DEBUG - AccountOperations - Exiting withdraw
+2020-10-09 10:48:22,436 - DEBUG - main - Exited main program loop.
+2020-10-09 10:48:22,436 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 10:48:22,436 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 10:48:22,436 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:48:28,123 - DEBUG - main - user entered args at prompt withdraw 12
+2020-10-09 10:48:28,123 - DEBUG - main - command parsed towithdraw
+2020-10-09 10:48:28,123 - DEBUG - AccountOperations - Entering withdraw
+2020-10-09 10:48:28,123 - DEBUG - AccountOperations - valid input
+2020-10-09 10:48:28,123 - DEBUG - main - Exited main program loop.
+2020-10-09 10:48:28,123 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 10:48:28,123 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 10:48:28,124 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:48:34,379 - DEBUG - main - user entered args at prompt withdraw 20
+2020-10-09 10:48:34,379 - DEBUG - main - command parsed towithdraw
+2020-10-09 10:48:34,379 - DEBUG - AccountOperations - Entering withdraw
+2020-10-09 10:48:34,379 - DEBUG - AccountOperations - valid input
+2020-10-09 10:48:34,379 - INFO - AccountOperations - account overdrawn: False
+2020-10-09 10:48:34,386 - DEBUG - AccountMongoDBService - Entering save_transaction
+2020-10-09 10:48:34,386 - INFO - AccountMongoDBService - Saving account balance [980.00000] for account [1234567890]
+2020-10-09 10:48:34,418 - INFO - AccountOperations - Withdrawal successful for account: 1234567890
+2020-10-09 10:48:34,419 - DEBUG - AccountMongoDBService - Entering update_history
+2020-10-09 10:48:34,419 - DEBUG - AccountMongoDBService - splitting current_time_str on space: 2020-10-09 14:48:34
+2020-10-09 10:48:34,419 - DEBUG - AccountMongoDBService - datetime_arr: ['2020-10-09', '14:48:34']
+2020-10-09 10:48:34,419 - INFO - AccountMongoDBService - Inserting to account_history for account 1234567890
+2020-10-09 10:48:34,419 - DEBUG - AccountMongoDBService - insert payload: {'account_id': '1234567890', 'date': '2020-10-09', 'time': '14:48:34', 'amount': '-$20.00', 'balance': '$980.00', 'created_date': datetime.datetime(2020, 10, 9, 14, 48, 34, 419640, tzinfo=datetime.timezone.utc)}
+2020-10-09 10:48:34,469 - DEBUG - AccountMongoDBService - account_history insert complete with response5f8078425ac2737624b6f9a6
+2020-10-09 10:48:34,469 - DEBUG - AccountMongoDBService - Exiting update_history
+2020-10-09 10:48:34,469 - DEBUG - Authorization - Entering refresh
+2020-10-09 10:48:34,469 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 10:48:34,469 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 10:48:34,469 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 10:48:34,496 - DEBUG - Authorization - Exiting refresh
+2020-10-09 10:48:34,496 - DEBUG - AccountOperations - Exiting withdraw
+2020-10-09 10:48:34,496 - DEBUG - main - Exited main program loop.
+2020-10-09 10:48:34,496 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 10:48:34,496 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 10:48:34,496 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:48:36,995 - DEBUG - main - user entered args at prompt history
+2020-10-09 10:48:36,995 - DEBUG - main - command parsed tohistory
+2020-10-09 10:48:36,995 - DEBUG - AccountOperations - Entering history
+2020-10-09 10:48:36,995 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('980.00000')}
+2020-10-09 10:48:36,995 - DEBUG - AccountMongoDBService - Entering find_account_hist_by_account_id
+2020-10-09 10:48:36,996 - INFO - AccountMongoDBService - finding account history by account id: 1234567890
+2020-10-09 10:48:36,996 - DEBUG - AccountMongoDBService - Exiting find_account_hist_by_account_id
+2020-10-09 10:48:37,016 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f8078425ac2737624b6f9a6'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '14:48:34', 'amount': '-$20.00', 'balance': '$980.00', 'created_date': datetime.datetime(2020, 10, 9, 14, 48, 34, 419000)}
+2020-10-09 10:48:37,016 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f8078025ac2737624b6f9a5'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '14:47:30', 'amount': '$1000.00', 'balance': '$1000.00', 'created_date': datetime.datetime(2020, 10, 9, 14, 47, 30, 94000)}
+2020-10-09 10:48:37,017 - DEBUG - AccountOperations - Exiting history
+2020-10-09 10:48:37,017 - DEBUG - main - Exited main program loop.
+2020-10-09 10:48:37,017 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 10:48:37,018 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 10:48:37,018 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 10:50:37,018 - DEBUG - SessionTimer - session interval elapsed
+2020-10-09 10:50:37,018 - DEBUG - Authorization - Entering logout
+2020-10-09 10:50:37,018 - INFO - Authorization - Account 1234567890 logged out.
+2020-10-09 10:50:37,018 - DEBUG - Authorization - exiting logout
+2020-10-09 10:55:25,171 - DEBUG - main - user entered args at prompt 
+2020-10-09 10:55:25,171 - DEBUG - main - command parsed to
+2020-10-09 10:55:25,171 - DEBUG - main - Exited main program loop.
+2020-10-09 12:28:13,540 - DEBUG - AccountMongoDBService - Initialized logger for AccountMongoDBService
+2020-10-09 12:28:13,676 - DEBUG - Authorization - Initialized logger for Authorization
+2020-10-09 12:28:13,677 - DEBUG - AccountOperations - Initialized logger for AccountOperations
+2020-10-09 12:28:13,677 - DEBUG - main - Application Started.
+2020-10-09 12:28:13,677 - DEBUG - main - Entering main loop
+2020-10-09 12:28:20,179 - DEBUG - main - user entered args at prompt authorize 1234567890 1234
+2020-10-09 12:28:20,179 - DEBUG - main - command parsed toauthorize
+2020-10-09 12:28:20,180 - INFO - main - authorizing with input['authorize', '1234567890', '1234']
+2020-10-09 12:28:20,180 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 12:28:20,180 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 12:28:20,181 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 12:28:20,181 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 12:28:20,359 - INFO - Authorization - Successfully authorized: {'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('980.00000')}
+2020-10-09 12:28:20,359 - DEBUG - Authorization - Exiting attempt_auth
+2020-10-09 12:28:20,360 - DEBUG - main - Exited main program loop.
+2020-10-09 12:28:20,360 - DEBUG - SessionTimer - initializing session timer: interval[120]
+2020-10-09 12:28:20,361 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:28:23,346 - DEBUG - main - user entered args at prompt end
+2020-10-09 12:28:23,347 - DEBUG - main - command parsed toend
+2020-10-09 12:28:23,347 - DEBUG - main - End command received, breaking out of main loop
+2020-10-09 12:28:23,348 - DEBUG - main - Application terminated.
+2020-10-09 12:29:02,412 - DEBUG - AccountMongoDBService - Initialized logger for AccountMongoDBService
+2020-10-09 12:29:02,456 - DEBUG - Authorization - Initialized logger for Authorization
+2020-10-09 12:29:02,457 - DEBUG - AccountOperations - Initialized logger for AccountOperations
+2020-10-09 12:29:02,457 - DEBUG - main - Application Started.
+2020-10-09 12:29:02,457 - DEBUG - main - Entering main loop
+2020-10-09 12:29:11,651 - DEBUG - main - user entered args at prompt authorize 1234567890 1234
+2020-10-09 12:29:11,652 - DEBUG - main - command parsed toauthorize
+2020-10-09 12:29:11,652 - INFO - main - authorizing with input['authorize', '1234567890', '1234']
+2020-10-09 12:29:11,653 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 12:29:11,653 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 12:29:11,653 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 12:29:11,653 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 12:29:11,827 - INFO - Authorization - Successfully authorized: {'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('980.00000')}
+2020-10-09 12:29:11,827 - DEBUG - Authorization - Exiting attempt_auth
+2020-10-09 12:29:11,827 - DEBUG - main - Exited main program loop.
+2020-10-09 12:29:11,828 - DEBUG - SessionTimer - initializing session timer: interval[5]
+2020-10-09 12:29:11,828 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:29:13,907 - DEBUG - main - user entered args at prompt balance
+2020-10-09 12:29:13,907 - DEBUG - main - command parsed tobalance
+2020-10-09 12:29:13,907 - DEBUG - AccountOperations - Entering balance
+2020-10-09 12:29:13,907 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('980.00000')}
+2020-10-09 12:29:13,907 - DEBUG - AccountOperations - printing account balance:$980.00
+2020-10-09 12:29:13,907 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 12:29:13,907 - DEBUG - main - Exited main program loop.
+2020-10-09 12:29:13,907 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:29:13,908 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:29:13,908 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:29:16,339 - DEBUG - main - user entered args at prompt balance
+2020-10-09 12:29:16,339 - DEBUG - main - command parsed tobalance
+2020-10-09 12:29:16,340 - DEBUG - AccountOperations - Entering balance
+2020-10-09 12:29:16,340 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('980.00000')}
+2020-10-09 12:29:16,340 - DEBUG - AccountOperations - printing account balance:$980.00
+2020-10-09 12:29:16,340 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 12:29:16,340 - DEBUG - main - Exited main program loop.
+2020-10-09 12:29:16,340 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:29:16,341 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:29:16,341 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:29:18,404 - DEBUG - main - user entered args at prompt balance
+2020-10-09 12:29:18,404 - DEBUG - main - command parsed tobalance
+2020-10-09 12:29:18,404 - DEBUG - AccountOperations - Entering balance
+2020-10-09 12:29:18,404 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('980.00000')}
+2020-10-09 12:29:18,404 - DEBUG - AccountOperations - printing account balance:$980.00
+2020-10-09 12:29:18,404 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 12:29:18,404 - DEBUG - main - Exited main program loop.
+2020-10-09 12:29:18,404 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:29:18,404 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:29:18,405 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:29:19,914 - DEBUG - main - user entered args at prompt balance
+2020-10-09 12:29:19,915 - DEBUG - main - command parsed tobalance
+2020-10-09 12:29:19,915 - DEBUG - AccountOperations - Entering balance
+2020-10-09 12:29:19,915 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('980.00000')}
+2020-10-09 12:29:19,915 - DEBUG - AccountOperations - printing account balance:$980.00
+2020-10-09 12:29:19,915 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 12:29:19,915 - DEBUG - main - Exited main program loop.
+2020-10-09 12:29:19,916 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:29:19,916 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:29:19,916 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:29:21,443 - DEBUG - main - user entered args at prompt balance
+2020-10-09 12:29:21,444 - DEBUG - main - command parsed tobalance
+2020-10-09 12:29:21,444 - DEBUG - AccountOperations - Entering balance
+2020-10-09 12:29:21,444 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('980.00000')}
+2020-10-09 12:29:21,444 - DEBUG - AccountOperations - printing account balance:$980.00
+2020-10-09 12:29:21,444 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 12:29:21,444 - DEBUG - main - Exited main program loop.
+2020-10-09 12:29:21,444 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:29:21,444 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:29:21,445 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:29:26,445 - DEBUG - SessionTimer - session interval elapsed
+2020-10-09 12:29:26,446 - DEBUG - Authorization - Entering logout
+2020-10-09 12:29:26,447 - INFO - Authorization - Account 1234567890 logged out.
+2020-10-09 12:29:26,447 - DEBUG - Authorization - exiting logout
+2020-10-09 12:29:33,923 - DEBUG - main - user entered args at prompt 
+2020-10-09 12:29:33,923 - DEBUG - main - command parsed to
+2020-10-09 12:29:33,924 - DEBUG - main - Exited main program loop.
+2020-10-09 12:29:41,115 - DEBUG - main - user entered args at prompt balance
+2020-10-09 12:29:41,115 - DEBUG - main - command parsed tobalance
+2020-10-09 12:29:41,115 - DEBUG - main - Exited main program loop.
+2020-10-09 12:29:42,499 - DEBUG - main - user entered args at prompt history
+2020-10-09 12:29:42,499 - DEBUG - main - command parsed tohistory
+2020-10-09 12:29:42,499 - DEBUG - main - Exited main program loop.
+2020-10-09 12:29:44,131 - DEBUG - main - user entered args at prompt withdraw
+2020-10-09 12:29:44,131 - DEBUG - main - command parsed towithdraw
+2020-10-09 12:29:44,131 - DEBUG - main - Exited main program loop.
+2020-10-09 12:29:49,451 - DEBUG - main - user entered args at prompt logout
+2020-10-09 12:29:49,451 - DEBUG - main - command parsed tologout
+2020-10-09 12:29:49,451 - DEBUG - Authorization - Entering logout
+2020-10-09 12:29:49,451 - INFO - Authorization - No account is authorized - No action taken in logout.
+2020-10-09 12:29:49,451 - DEBUG - Authorization - exiting logout
+2020-10-09 12:29:49,452 - DEBUG - main - Exited main program loop.
+2020-10-09 12:29:54,442 - DEBUG - main - user entered args at prompt end
+2020-10-09 12:29:54,443 - DEBUG - main - command parsed toend
+2020-10-09 12:29:54,443 - DEBUG - main - End command received, breaking out of main loop
+2020-10-09 12:29:54,443 - DEBUG - main - Application terminated.
+2020-10-09 12:36:00,064 - DEBUG - AccountMongoDBService - Initialized logger for AccountMongoDBService
+2020-10-09 12:36:00,165 - DEBUG - Authorization - Initialized logger for Authorization
+2020-10-09 12:36:00,165 - DEBUG - AccountOperations - Initialized logger for AccountOperations
+2020-10-09 12:36:00,166 - DEBUG - main - Application Started.
+2020-10-09 12:36:00,166 - DEBUG - main - Entering main loop
+2020-10-09 12:36:05,923 - DEBUG - main - user entered args at prompt authorize 1234567890 1234
+2020-10-09 12:36:05,923 - DEBUG - main - command parsed toauthorize
+2020-10-09 12:36:05,924 - INFO - main - authorizing with input['authorize', '1234567890', '1234']
+2020-10-09 12:36:05,924 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 12:36:05,924 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 12:36:05,925 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 12:36:05,925 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 12:36:06,090 - INFO - Authorization - Successfully authorized: {'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('980.00000')}
+2020-10-09 12:36:06,090 - DEBUG - Authorization - Exiting attempt_auth
+2020-10-09 12:36:06,090 - DEBUG - main - Exited main program loop.
+2020-10-09 12:36:06,090 - DEBUG - SessionTimer - initializing session timer: interval[120]
+2020-10-09 12:36:06,091 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:36:09,746 - DEBUG - main - user entered args at prompt withdraw 20
+2020-10-09 12:36:09,747 - DEBUG - main - command parsed towithdraw
+2020-10-09 12:36:09,747 - DEBUG - AccountOperations - Entering withdraw
+2020-10-09 12:36:09,747 - DEBUG - AccountOperations - valid input
+2020-10-09 12:36:09,747 - INFO - AccountOperations - account overdrawn: False
+2020-10-09 12:36:09,748 - DEBUG - AccountMongoDBService - Entering save_transaction
+2020-10-09 12:36:09,748 - INFO - AccountMongoDBService - Saving account balance [960.00000] for account [1234567890]
+2020-10-09 12:36:09,799 - INFO - AccountOperations - Withdrawal successful for account: 1234567890
+2020-10-09 12:36:09,799 - DEBUG - AccountOperations - Entering balance
+2020-10-09 12:36:09,800 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('980.00000')}
+2020-10-09 12:36:09,800 - DEBUG - AccountOperations - printing account balance:$980.00
+2020-10-09 12:36:09,800 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 12:36:09,800 - DEBUG - AccountMongoDBService - Entering update_history
+2020-10-09 12:36:09,800 - DEBUG - AccountMongoDBService - splitting current_time_str on space: 2020-10-09 16:36:09
+2020-10-09 12:36:09,800 - DEBUG - AccountMongoDBService - datetime_arr: ['2020-10-09', '16:36:09']
+2020-10-09 12:36:09,800 - INFO - AccountMongoDBService - Inserting to account_history for account 1234567890
+2020-10-09 12:36:09,800 - DEBUG - AccountMongoDBService - insert payload: {'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:36:09', 'amount': '-$20.00', 'balance': '$960.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 36, 9, 800587, tzinfo=datetime.timezone.utc)}
+2020-10-09 12:36:09,829 - DEBUG - AccountMongoDBService - account_history insert complete with response5f8091793b6d315992452fac
+2020-10-09 12:36:09,829 - DEBUG - AccountMongoDBService - Exiting update_history
+2020-10-09 12:36:09,829 - DEBUG - Authorization - Entering refresh
+2020-10-09 12:36:09,829 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 12:36:09,829 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 12:36:09,829 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 12:36:09,851 - DEBUG - Authorization - Exiting refresh
+2020-10-09 12:36:09,851 - DEBUG - AccountOperations - Exiting withdraw
+2020-10-09 12:36:09,851 - DEBUG - main - Exited main program loop.
+2020-10-09 12:36:09,851 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:36:09,852 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:36:09,852 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:37:41,706 - DEBUG - AccountMongoDBService - Initialized logger for AccountMongoDBService
+2020-10-09 12:37:41,787 - DEBUG - Authorization - Initialized logger for Authorization
+2020-10-09 12:37:41,787 - DEBUG - AccountOperations - Initialized logger for AccountOperations
+2020-10-09 12:37:41,787 - DEBUG - main - Application Started.
+2020-10-09 12:37:41,787 - DEBUG - main - Entering main loop
+2020-10-09 12:37:42,267 - DEBUG - main - user entered args at prompt 
+2020-10-09 12:37:42,267 - DEBUG - main - command parsed to
+2020-10-09 12:37:42,267 - DEBUG - main - Exited main program loop.
+2020-10-09 12:37:51,242 - DEBUG - main - user entered args at prompt authorize 1234567890
+2020-10-09 12:37:51,243 - DEBUG - main - command parsed toauthorize
+2020-10-09 12:37:51,243 - INFO - main - authorizing with input['authorize', '1234567890']
+2020-10-09 12:37:51,243 - DEBUG - main - Exited main program loop.
+2020-10-09 12:37:56,363 - DEBUG - main - user entered args at prompt authorize 1234567890
+2020-10-09 12:37:56,364 - DEBUG - main - command parsed toauthorize
+2020-10-09 12:37:56,364 - INFO - main - authorizing with input['authorize', '1234567890']
+2020-10-09 12:37:56,364 - DEBUG - main - Exited main program loop.
+2020-10-09 12:38:04,538 - DEBUG - main - user entered args at prompt authorize 1234567890
+2020-10-09 12:38:04,539 - DEBUG - main - command parsed toauthorize
+2020-10-09 12:38:04,539 - INFO - main - authorizing with input['authorize', '1234567890']
+2020-10-09 12:38:04,539 - DEBUG - main - Exited main program loop.
+2020-10-09 12:38:13,475 - DEBUG - main - user entered args at prompt authorize 1234567890 1234
+2020-10-09 12:38:13,475 - DEBUG - main - command parsed toauthorize
+2020-10-09 12:38:13,475 - INFO - main - authorizing with input['authorize', '1234567890', '1234']
+2020-10-09 12:38:13,475 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 12:38:13,475 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 12:38:13,475 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 12:38:13,475 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 12:38:13,655 - INFO - Authorization - Successfully authorized: {'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('960.00000')}
+2020-10-09 12:38:13,655 - DEBUG - Authorization - Exiting attempt_auth
+2020-10-09 12:38:13,655 - DEBUG - main - Exited main program loop.
+2020-10-09 12:38:13,655 - DEBUG - SessionTimer - initializing session timer: interval[120]
+2020-10-09 12:38:13,656 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:38:21,899 - DEBUG - main - user entered args at prompt withdraw 20
+2020-10-09 12:38:21,899 - DEBUG - main - command parsed towithdraw
+2020-10-09 12:38:21,899 - DEBUG - AccountOperations - Entering withdraw
+2020-10-09 12:38:21,899 - DEBUG - AccountOperations - valid input
+2020-10-09 12:38:21,899 - INFO - AccountOperations - account overdrawn: False
+2020-10-09 12:38:21,900 - DEBUG - AccountMongoDBService - Entering save_transaction
+2020-10-09 12:38:21,900 - INFO - AccountMongoDBService - Saving account balance [940.00000] for account [1234567890]
+2020-10-09 12:38:21,933 - INFO - AccountOperations - Withdrawal successful for account: 1234567890
+2020-10-09 12:38:41,366 - DEBUG - AccountMongoDBService - Initialized logger for AccountMongoDBService
+2020-10-09 12:38:41,413 - DEBUG - Authorization - Initialized logger for Authorization
+2020-10-09 12:38:41,413 - DEBUG - AccountOperations - Initialized logger for AccountOperations
+2020-10-09 12:38:41,414 - DEBUG - main - Application Started.
+2020-10-09 12:38:41,414 - DEBUG - main - Entering main loop
+2020-10-09 12:38:47,474 - DEBUG - main - user entered args at prompt authorize 1234567890 1234
+2020-10-09 12:38:47,475 - DEBUG - main - command parsed toauthorize
+2020-10-09 12:38:47,475 - INFO - main - authorizing with input['authorize', '1234567890', '1234']
+2020-10-09 12:38:47,475 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 12:38:47,475 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 12:38:47,475 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 12:38:47,475 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 12:38:47,674 - INFO - Authorization - Successfully authorized: {'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('940.00000')}
+2020-10-09 12:38:47,674 - DEBUG - Authorization - Exiting attempt_auth
+2020-10-09 12:38:47,674 - DEBUG - main - Exited main program loop.
+2020-10-09 12:38:47,674 - DEBUG - SessionTimer - initializing session timer: interval[120]
+2020-10-09 12:38:47,675 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:38:49,515 - DEBUG - main - user entered args at prompt withdraw 20
+2020-10-09 12:38:49,515 - DEBUG - main - command parsed towithdraw
+2020-10-09 12:38:49,515 - DEBUG - AccountOperations - Entering withdraw
+2020-10-09 12:38:49,515 - DEBUG - AccountOperations - valid input
+2020-10-09 12:38:49,515 - INFO - AccountOperations - account overdrawn: False
+2020-10-09 12:38:49,516 - DEBUG - AccountMongoDBService - Entering save_transaction
+2020-10-09 12:38:49,516 - INFO - AccountMongoDBService - Saving account balance [920.00000] for account [1234567890]
+2020-10-09 12:38:49,550 - INFO - AccountOperations - Withdrawal successful for account: 1234567890
+2020-10-09 12:38:49,551 - DEBUG - AccountOperations - Entering balance
+2020-10-09 12:38:49,551 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('940.00000')}
+2020-10-09 12:38:49,551 - DEBUG - AccountOperations - printing account balance:$940.00
+2020-10-09 12:38:49,551 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 12:38:49,551 - DEBUG - AccountMongoDBService - Entering update_history
+2020-10-09 12:38:49,551 - DEBUG - AccountMongoDBService - splitting current_time_str on space: 2020-10-09 16:38:49
+2020-10-09 12:38:49,551 - DEBUG - AccountMongoDBService - datetime_arr: ['2020-10-09', '16:38:49']
+2020-10-09 12:38:49,552 - INFO - AccountMongoDBService - Inserting to account_history for account 1234567890
+2020-10-09 12:38:49,552 - DEBUG - AccountMongoDBService - insert payload: {'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:38:49', 'amount': '-$20.00', 'balance': '$920.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 38, 49, 551559, tzinfo=datetime.timezone.utc)}
+2020-10-09 12:38:49,590 - DEBUG - AccountMongoDBService - account_history insert complete with response5f80921962bd950c387578f2
+2020-10-09 12:38:49,591 - DEBUG - AccountMongoDBService - Exiting update_history
+2020-10-09 12:38:49,591 - DEBUG - Authorization - Entering refresh
+2020-10-09 12:38:49,591 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 12:38:49,591 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 12:38:49,591 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 12:38:49,612 - DEBUG - Authorization - Exiting refresh
+2020-10-09 12:38:49,612 - DEBUG - AccountOperations - Exiting withdraw
+2020-10-09 12:38:49,612 - DEBUG - main - Exited main program loop.
+2020-10-09 12:38:49,612 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:38:49,613 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:38:49,613 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:39:13,028 - DEBUG - main - user entered args at prompt withdraw 940
+2020-10-09 12:39:13,028 - DEBUG - main - command parsed towithdraw
+2020-10-09 12:39:13,028 - DEBUG - AccountOperations - Entering withdraw
+2020-10-09 12:39:13,028 - DEBUG - AccountOperations - valid input
+2020-10-09 12:39:13,028 - INFO - AccountOperations - account overdrawn: False
+2020-10-09 12:39:13,028 - INFO - AccountOperations - Account has become overdrawn.
+2020-10-09 12:39:13,028 - DEBUG - AccountMongoDBService - Entering save_transaction
+2020-10-09 12:39:13,028 - INFO - AccountMongoDBService - Saving account balance [-20.00000] for account [1234567890]
+2020-10-09 12:39:13,060 - INFO - AccountOperations - Withdrawal successful for account: 1234567890
+2020-10-09 12:39:13,060 - DEBUG - AccountOperations - Entering balance
+2020-10-09 12:39:13,060 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('920.00000')}
+2020-10-09 12:39:13,061 - DEBUG - AccountOperations - printing account balance:$920.00
+2020-10-09 12:39:13,061 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 12:39:13,061 - DEBUG - AccountMongoDBService - Entering update_history
+2020-10-09 12:39:13,061 - DEBUG - AccountMongoDBService - splitting current_time_str on space: 2020-10-09 16:39:13
+2020-10-09 12:39:13,061 - DEBUG - AccountMongoDBService - datetime_arr: ['2020-10-09', '16:39:13']
+2020-10-09 12:39:13,061 - INFO - AccountMongoDBService - Inserting to account_history for account 1234567890
+2020-10-09 12:39:13,061 - DEBUG - AccountMongoDBService - insert payload: {'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:39:13', 'amount': '-$940.00', 'balance': '-$20.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 39, 13, 61808, tzinfo=datetime.timezone.utc)}
+2020-10-09 12:39:13,088 - DEBUG - AccountMongoDBService - account_history insert complete with response5f80923162bd950c387578f3
+2020-10-09 12:39:13,088 - DEBUG - AccountMongoDBService - Exiting update_history
+2020-10-09 12:39:13,088 - DEBUG - Authorization - Entering refresh
+2020-10-09 12:39:13,089 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 12:39:13,089 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 12:39:13,089 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 12:39:13,115 - DEBUG - Authorization - Exiting refresh
+2020-10-09 12:39:13,115 - INFO - AccountOperations - Charging overdraft fee of $5
+2020-10-09 12:39:13,116 - DEBUG - AccountMongoDBService - Entering save_transaction
+2020-10-09 12:39:13,116 - INFO - AccountMongoDBService - Saving account balance [-25.00000] for account [1234567890]
+2020-10-09 12:39:13,149 - DEBUG - AccountMongoDBService - Entering update_history
+2020-10-09 12:39:13,149 - DEBUG - AccountMongoDBService - splitting current_time_str on space: 2020-10-09 16:39:13
+2020-10-09 12:39:13,149 - DEBUG - AccountMongoDBService - datetime_arr: ['2020-10-09', '16:39:13']
+2020-10-09 12:39:13,149 - INFO - AccountMongoDBService - Inserting to account_history for account 1234567890
+2020-10-09 12:39:13,149 - DEBUG - AccountMongoDBService - insert payload: {'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:39:13', 'amount': '-$5.00', 'balance': '-$25.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 39, 13, 149211, tzinfo=datetime.timezone.utc)}
+2020-10-09 12:39:13,177 - DEBUG - AccountMongoDBService - account_history insert complete with response5f80923162bd950c387578f4
+2020-10-09 12:39:13,177 - DEBUG - AccountMongoDBService - Exiting update_history
+2020-10-09 12:39:13,177 - DEBUG - Authorization - Entering refresh
+2020-10-09 12:39:13,177 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 12:39:13,177 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 12:39:13,177 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 12:39:13,203 - DEBUG - Authorization - Exiting refresh
+2020-10-09 12:39:13,203 - DEBUG - AccountOperations - Exiting withdraw
+2020-10-09 12:39:13,203 - DEBUG - main - Exited main program loop.
+2020-10-09 12:39:13,203 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:39:13,204 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:39:13,204 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:39:30,123 - DEBUG - main - user entered args at prompt balance
+2020-10-09 12:39:30,123 - DEBUG - main - command parsed tobalance
+2020-10-09 12:39:30,123 - DEBUG - AccountOperations - Entering balance
+2020-10-09 12:39:30,123 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('-25.00000')}
+2020-10-09 12:39:30,123 - DEBUG - AccountOperations - printing account balance:-$25.00
+2020-10-09 12:39:30,123 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 12:39:30,123 - DEBUG - main - Exited main program loop.
+2020-10-09 12:39:30,123 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:39:30,124 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:39:30,124 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:41:30,124 - DEBUG - SessionTimer - session interval elapsed
+2020-10-09 12:41:30,124 - DEBUG - Authorization - Entering logout
+2020-10-09 12:41:30,124 - INFO - Authorization - Account 1234567890 logged out.
+2020-10-09 12:41:30,124 - DEBUG - Authorization - exiting logout
+2020-10-09 12:45:01,555 - DEBUG - main - user entered args at prompt 
+2020-10-09 12:45:01,555 - DEBUG - main - command parsed to
+2020-10-09 12:45:01,555 - DEBUG - main - Exited main program loop.
+2020-10-09 12:45:27,452 - DEBUG - AccountMongoDBService - Initialized logger for AccountMongoDBService
+2020-10-09 12:45:27,539 - DEBUG - Authorization - Initialized logger for Authorization
+2020-10-09 12:45:27,540 - DEBUG - AccountOperations - Initialized logger for AccountOperations
+2020-10-09 12:45:27,540 - DEBUG - main - Application Started.
+2020-10-09 12:45:27,541 - DEBUG - main - Entering main loop
+2020-10-09 12:45:33,028 - DEBUG - main - user entered args at prompt authorize 12345678901234
+2020-10-09 12:45:33,028 - DEBUG - main - command parsed toauthorize
+2020-10-09 12:45:33,028 - INFO - main - authorizing with input['authorize', '12345678901234']
+2020-10-09 12:45:33,029 - DEBUG - main - Exited main program loop.
+2020-10-09 12:45:41,451 - DEBUG - main - user entered args at prompt authorize 1234567890 1234
+2020-10-09 12:45:41,451 - DEBUG - main - command parsed toauthorize
+2020-10-09 12:45:41,451 - INFO - main - authorizing with input['authorize', '1234567890', '1234']
+2020-10-09 12:45:41,452 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 12:45:41,452 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 12:45:41,452 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 12:45:41,453 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 12:45:41,639 - INFO - Authorization - Successfully authorized: {'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('-25.00000')}
+2020-10-09 12:45:41,640 - DEBUG - Authorization - Exiting attempt_auth
+2020-10-09 12:45:41,640 - DEBUG - main - Exited main program loop.
+2020-10-09 12:45:41,641 - DEBUG - SessionTimer - initializing session timer: interval[120]
+2020-10-09 12:45:41,641 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:45:45,443 - DEBUG - main - user entered args at prompt balance
+2020-10-09 12:45:45,443 - DEBUG - main - command parsed tobalance
+2020-10-09 12:45:45,444 - DEBUG - AccountOperations - Entering balance
+2020-10-09 12:45:45,444 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('-25.00000')}
+2020-10-09 12:45:45,444 - DEBUG - AccountOperations - printing account balance:-$25.00
+2020-10-09 12:45:45,445 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 12:45:45,445 - DEBUG - main - Exited main program loop.
+2020-10-09 12:45:45,445 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:45:45,446 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:45:45,446 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:45:51,739 - DEBUG - main - user entered args at prompt deposite 25
+2020-10-09 12:45:51,740 - DEBUG - main - command parsed todeposite
+2020-10-09 12:45:51,740 - DEBUG - AccountOperations - Entering desposite
+2020-10-09 12:45:51,740 - DEBUG - AccountMongoDBService - Entering save_transaction
+2020-10-09 12:45:51,741 - INFO - AccountMongoDBService - Saving account balance [0.00000] for account [1234567890]
+2020-10-09 12:45:51,783 - INFO - AccountOperations - Deposite succesful for account: 1234567890
+2020-10-09 12:45:51,783 - DEBUG - Authorization - Entering refresh
+2020-10-09 12:45:51,784 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 12:45:51,784 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 12:45:51,784 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 12:45:51,814 - DEBUG - Authorization - Exiting refresh
+2020-10-09 12:45:51,815 - DEBUG - AccountOperations - Entering balance
+2020-10-09 12:45:51,815 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('0.00000')}
+2020-10-09 12:45:51,815 - DEBUG - AccountOperations - printing account balance:$0.00
+2020-10-09 12:45:51,815 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 12:45:51,815 - DEBUG - AccountMongoDBService - Entering update_history
+2020-10-09 12:45:51,815 - DEBUG - AccountMongoDBService - splitting current_time_str on space: 2020-10-09 16:45:51
+2020-10-09 12:45:51,816 - DEBUG - AccountMongoDBService - datetime_arr: ['2020-10-09', '16:45:51']
+2020-10-09 12:45:51,816 - INFO - AccountMongoDBService - Inserting to account_history for account 1234567890
+2020-10-09 12:45:51,816 - DEBUG - AccountMongoDBService - insert payload: {'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:45:51', 'amount': '$25.00', 'balance': '$0.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 45, 51, 815640, tzinfo=datetime.timezone.utc)}
+2020-10-09 12:45:51,850 - DEBUG - AccountMongoDBService - account_history insert complete with response5f8093bf21b7db1b27953973
+2020-10-09 12:45:51,850 - DEBUG - AccountMongoDBService - Exiting update_history
+2020-10-09 12:45:51,850 - DEBUG - AccountOperations - Exiting desposite
+2020-10-09 12:45:51,851 - DEBUG - main - Exited main program loop.
+2020-10-09 12:45:51,851 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:45:51,851 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:45:51,851 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:46:01,755 - DEBUG - main - user entered args at prompt withdraw 20
+2020-10-09 12:46:01,755 - DEBUG - main - command parsed towithdraw
+2020-10-09 12:46:01,755 - DEBUG - AccountOperations - Entering withdraw
+2020-10-09 12:46:01,755 - DEBUG - AccountOperations - valid input
+2020-10-09 12:46:01,755 - INFO - AccountOperations - account overdrawn: True
+2020-10-09 12:46:01,756 - DEBUG - main - Exited main program loop.
+2020-10-09 12:46:01,756 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:46:01,756 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:46:01,757 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:46:06,795 - DEBUG - main - user entered args at prompt deposite 19
+2020-10-09 12:46:06,795 - DEBUG - main - command parsed todeposite
+2020-10-09 12:46:06,795 - DEBUG - AccountOperations - Entering desposite
+2020-10-09 12:46:06,795 - DEBUG - AccountMongoDBService - Entering save_transaction
+2020-10-09 12:46:06,795 - INFO - AccountMongoDBService - Saving account balance [19.00000] for account [1234567890]
+2020-10-09 12:46:06,820 - INFO - AccountOperations - Deposite succesful for account: 1234567890
+2020-10-09 12:46:06,820 - DEBUG - Authorization - Entering refresh
+2020-10-09 12:46:06,820 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 12:46:06,820 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 12:46:06,820 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 12:46:06,847 - DEBUG - Authorization - Exiting refresh
+2020-10-09 12:46:06,847 - DEBUG - AccountOperations - Entering balance
+2020-10-09 12:46:06,847 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('19.00000')}
+2020-10-09 12:46:06,847 - DEBUG - AccountOperations - printing account balance:$19.00
+2020-10-09 12:46:06,847 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 12:46:06,847 - DEBUG - AccountMongoDBService - Entering update_history
+2020-10-09 12:46:06,848 - DEBUG - AccountMongoDBService - splitting current_time_str on space: 2020-10-09 16:46:06
+2020-10-09 12:46:06,848 - DEBUG - AccountMongoDBService - datetime_arr: ['2020-10-09', '16:46:06']
+2020-10-09 12:46:06,848 - INFO - AccountMongoDBService - Inserting to account_history for account 1234567890
+2020-10-09 12:46:06,848 - DEBUG - AccountMongoDBService - insert payload: {'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:46:06', 'amount': '$19.00', 'balance': '$19.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 46, 6, 848348, tzinfo=datetime.timezone.utc)}
+2020-10-09 12:46:06,878 - DEBUG - AccountMongoDBService - account_history insert complete with response5f8093ce21b7db1b27953974
+2020-10-09 12:46:06,878 - DEBUG - AccountMongoDBService - Exiting update_history
+2020-10-09 12:46:06,878 - DEBUG - AccountOperations - Exiting desposite
+2020-10-09 12:46:06,878 - DEBUG - main - Exited main program loop.
+2020-10-09 12:46:06,878 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:46:06,878 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:46:06,879 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:46:11,075 - DEBUG - main - user entered args at prompt withdraw 20
+2020-10-09 12:46:11,075 - DEBUG - main - command parsed towithdraw
+2020-10-09 12:46:11,075 - DEBUG - AccountOperations - Entering withdraw
+2020-10-09 12:46:11,075 - DEBUG - AccountOperations - valid input
+2020-10-09 12:46:11,075 - INFO - AccountOperations - account overdrawn: True
+2020-10-09 12:46:11,075 - DEBUG - main - Exited main program loop.
+2020-10-09 12:46:11,075 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:46:11,076 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:46:11,076 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:46:16,051 - DEBUG - main - user entered args at prompt balance
+2020-10-09 12:46:16,051 - DEBUG - main - command parsed tobalance
+2020-10-09 12:46:16,051 - DEBUG - AccountOperations - Entering balance
+2020-10-09 12:46:16,051 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('19.00000')}
+2020-10-09 12:46:16,051 - DEBUG - AccountOperations - printing account balance:$19.00
+2020-10-09 12:46:16,051 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 12:46:16,052 - DEBUG - main - Exited main program loop.
+2020-10-09 12:46:16,052 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:46:16,052 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:46:16,052 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:46:17,395 - DEBUG - main - user entered args at prompt history
+2020-10-09 12:46:17,395 - DEBUG - main - command parsed tohistory
+2020-10-09 12:46:17,395 - DEBUG - AccountOperations - Entering history
+2020-10-09 12:46:17,395 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('19.00000')}
+2020-10-09 12:46:17,395 - DEBUG - AccountMongoDBService - Entering find_account_hist_by_account_id
+2020-10-09 12:46:17,395 - INFO - AccountMongoDBService - finding account history by account id: 1234567890
+2020-10-09 12:46:17,395 - DEBUG - AccountMongoDBService - Exiting find_account_hist_by_account_id
+2020-10-09 12:46:17,443 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f8093ce21b7db1b27953974'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:46:06', 'amount': '$19.00', 'balance': '$19.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 46, 6, 848000)}
+2020-10-09 12:46:17,444 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f8093bf21b7db1b27953973'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:45:51', 'amount': '$25.00', 'balance': '$0.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 45, 51, 815000)}
+2020-10-09 12:46:17,444 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f80923162bd950c387578f4'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:39:13', 'amount': '-$5.00', 'balance': '-$25.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 39, 13, 149000)}
+2020-10-09 12:46:17,445 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f80923162bd950c387578f3'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:39:13', 'amount': '-$940.00', 'balance': '-$20.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 39, 13, 61000)}
+2020-10-09 12:46:17,445 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f80921962bd950c387578f2'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:38:49', 'amount': '-$20.00', 'balance': '$920.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 38, 49, 551000)}
+2020-10-09 12:46:17,445 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f8091793b6d315992452fac'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:36:09', 'amount': '-$20.00', 'balance': '$960.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 36, 9, 800000)}
+2020-10-09 12:46:17,445 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f808f53e029d5f411fbcc9e'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:26:59', 'amount': '-$9980.00', 'balance': '$980.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 26, 59, 287000)}
+2020-10-09 12:46:17,445 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f808f4fe029d5f411fbcc9d'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:26:55', 'amount': '$10000.00', 'balance': '$10960.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 26, 55, 650000)}
+2020-10-09 12:46:17,445 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f808f46e029d5f411fbcc9c'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:26:46', 'amount': '$20.00', 'balance': '$960.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 26, 46, 337000)}
+2020-10-09 12:46:17,446 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f808f3fe029d5f411fbcc9b'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:26:39', 'amount': '-$20.00', 'balance': '$940.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 26, 39, 540000)}
+2020-10-09 12:46:17,446 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f808c9bd0ac60a0aa9f48e5'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:15:23', 'amount': '-$20.00', 'balance': '$960.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 15, 23, 218000)}
+2020-10-09 12:46:17,446 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f8078425ac2737624b6f9a6'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '14:48:34', 'amount': '-$20.00', 'balance': '$980.00', 'created_date': datetime.datetime(2020, 10, 9, 14, 48, 34, 419000)}
+2020-10-09 12:46:17,446 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f8078025ac2737624b6f9a5'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '14:47:30', 'amount': '$1000.00', 'balance': '$1000.00', 'created_date': datetime.datetime(2020, 10, 9, 14, 47, 30, 94000)}
+2020-10-09 12:46:17,446 - DEBUG - AccountOperations - Exiting history
+2020-10-09 12:46:17,446 - DEBUG - main - Exited main program loop.
+2020-10-09 12:46:17,446 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:46:17,446 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:46:17,446 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:46:31,443 - DEBUG - main - user entered args at prompt balance
+2020-10-09 12:46:31,443 - DEBUG - main - command parsed tobalance
+2020-10-09 12:46:31,444 - DEBUG - AccountOperations - Entering balance
+2020-10-09 12:46:31,444 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('19.00000')}
+2020-10-09 12:46:31,444 - DEBUG - AccountOperations - printing account balance:$19.00
+2020-10-09 12:46:31,444 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 12:46:31,444 - DEBUG - main - Exited main program loop.
+2020-10-09 12:46:31,444 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:46:31,444 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:46:31,445 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:46:33,683 - DEBUG - main - user entered args at prompt deposite
+2020-10-09 12:46:33,683 - DEBUG - main - command parsed todeposite
+2020-10-09 12:46:33,683 - DEBUG - AccountOperations - Entering desposite
+2020-10-09 12:46:33,684 - DEBUG - AccountOperations - Exiting desposite
+2020-10-09 12:46:33,684 - DEBUG - main - Exited main program loop.
+2020-10-09 12:46:33,684 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:46:33,684 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:46:33,684 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:46:39,091 - DEBUG - main - user entered args at prompt deposite 2
+2020-10-09 12:46:39,091 - DEBUG - main - command parsed todeposite
+2020-10-09 12:46:39,092 - DEBUG - AccountOperations - Entering desposite
+2020-10-09 12:46:39,092 - DEBUG - AccountMongoDBService - Entering save_transaction
+2020-10-09 12:46:39,092 - INFO - AccountMongoDBService - Saving account balance [21.00000] for account [1234567890]
+2020-10-09 12:46:39,124 - INFO - AccountOperations - Deposite succesful for account: 1234567890
+2020-10-09 12:46:39,124 - DEBUG - Authorization - Entering refresh
+2020-10-09 12:46:39,124 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 12:46:39,124 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 12:46:39,124 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 12:46:39,151 - DEBUG - Authorization - Exiting refresh
+2020-10-09 12:46:39,152 - DEBUG - AccountOperations - Entering balance
+2020-10-09 12:46:39,152 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('21.00000')}
+2020-10-09 12:46:39,152 - DEBUG - AccountOperations - printing account balance:$21.00
+2020-10-09 12:46:39,152 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 12:46:39,152 - DEBUG - AccountMongoDBService - Entering update_history
+2020-10-09 12:46:39,152 - DEBUG - AccountMongoDBService - splitting current_time_str on space: 2020-10-09 16:46:39
+2020-10-09 12:46:39,152 - DEBUG - AccountMongoDBService - datetime_arr: ['2020-10-09', '16:46:39']
+2020-10-09 12:46:39,152 - INFO - AccountMongoDBService - Inserting to account_history for account 1234567890
+2020-10-09 12:46:39,152 - DEBUG - AccountMongoDBService - insert payload: {'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:46:39', 'amount': '$2.00', 'balance': '$21.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 46, 39, 152566, tzinfo=datetime.timezone.utc)}
+2020-10-09 12:46:39,182 - DEBUG - AccountMongoDBService - account_history insert complete with response5f8093ef21b7db1b27953975
+2020-10-09 12:46:39,183 - DEBUG - AccountMongoDBService - Exiting update_history
+2020-10-09 12:46:39,183 - DEBUG - AccountOperations - Exiting desposite
+2020-10-09 12:46:39,183 - DEBUG - main - Exited main program loop.
+2020-10-09 12:46:39,183 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:46:39,184 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:46:39,184 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:46:44,875 - DEBUG - main - user entered args at prompt withdraw 40
+2020-10-09 12:46:44,875 - DEBUG - main - command parsed towithdraw
+2020-10-09 12:46:44,875 - DEBUG - AccountOperations - Entering withdraw
+2020-10-09 12:46:44,875 - DEBUG - AccountOperations - valid input
+2020-10-09 12:46:44,876 - INFO - AccountOperations - account overdrawn: False
+2020-10-09 12:46:44,876 - INFO - AccountOperations - Account has become overdrawn.
+2020-10-09 12:46:44,876 - DEBUG - AccountMongoDBService - Entering save_transaction
+2020-10-09 12:46:44,876 - INFO - AccountMongoDBService - Saving account balance [1.00000] for account [1234567890]
+2020-10-09 12:46:44,904 - INFO - AccountOperations - Withdrawal successful for account: 1234567890
+2020-10-09 12:46:44,904 - DEBUG - AccountOperations - Entering balance
+2020-10-09 12:46:44,904 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('21.00000')}
+2020-10-09 12:46:44,904 - DEBUG - AccountOperations - printing account balance:$21.00
+2020-10-09 12:46:44,904 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 12:46:44,904 - DEBUG - AccountMongoDBService - Entering update_history
+2020-10-09 12:46:44,904 - DEBUG - AccountMongoDBService - splitting current_time_str on space: 2020-10-09 16:46:44
+2020-10-09 12:46:44,904 - DEBUG - AccountMongoDBService - datetime_arr: ['2020-10-09', '16:46:44']
+2020-10-09 12:46:44,904 - INFO - AccountMongoDBService - Inserting to account_history for account 1234567890
+2020-10-09 12:46:44,904 - DEBUG - AccountMongoDBService - insert payload: {'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:46:44', 'amount': '-$20.00', 'balance': '$1.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 46, 44, 904986, tzinfo=datetime.timezone.utc)}
+2020-10-09 12:46:44,932 - DEBUG - AccountMongoDBService - account_history insert complete with response5f8093f421b7db1b27953976
+2020-10-09 12:46:44,932 - DEBUG - AccountMongoDBService - Exiting update_history
+2020-10-09 12:46:44,933 - DEBUG - Authorization - Entering refresh
+2020-10-09 12:46:44,933 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 12:46:44,933 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 12:46:44,933 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 12:46:44,960 - DEBUG - Authorization - Exiting refresh
+2020-10-09 12:46:44,960 - INFO - AccountOperations - Charging overdraft fee of $5
+2020-10-09 12:46:44,960 - DEBUG - AccountMongoDBService - Entering save_transaction
+2020-10-09 12:46:44,961 - INFO - AccountMongoDBService - Saving account balance [-4.00000] for account [1234567890]
+2020-10-09 12:46:44,993 - DEBUG - AccountMongoDBService - Entering update_history
+2020-10-09 12:46:44,993 - DEBUG - AccountMongoDBService - splitting current_time_str on space: 2020-10-09 16:46:44
+2020-10-09 12:46:44,993 - DEBUG - AccountMongoDBService - datetime_arr: ['2020-10-09', '16:46:44']
+2020-10-09 12:46:44,993 - INFO - AccountMongoDBService - Inserting to account_history for account 1234567890
+2020-10-09 12:46:44,993 - DEBUG - AccountMongoDBService - insert payload: {'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:46:44', 'amount': '-$5.00', 'balance': '-$4.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 46, 44, 993357, tzinfo=datetime.timezone.utc)}
+2020-10-09 12:46:45,022 - DEBUG - AccountMongoDBService - account_history insert complete with response5f8093f421b7db1b27953977
+2020-10-09 12:46:45,022 - DEBUG - AccountMongoDBService - Exiting update_history
+2020-10-09 12:46:45,022 - DEBUG - Authorization - Entering refresh
+2020-10-09 12:46:45,022 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 12:46:45,023 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 12:46:45,023 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 12:46:45,052 - DEBUG - Authorization - Exiting refresh
+2020-10-09 12:46:45,052 - DEBUG - AccountOperations - Exiting withdraw
+2020-10-09 12:46:45,052 - DEBUG - main - Exited main program loop.
+2020-10-09 12:46:45,052 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:46:45,053 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:46:45,053 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:47:17,499 - DEBUG - main - user entered args at prompt history
+2020-10-09 12:47:17,500 - DEBUG - main - command parsed tohistory
+2020-10-09 12:47:17,500 - DEBUG - AccountOperations - Entering history
+2020-10-09 12:47:17,500 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('-4.00000')}
+2020-10-09 12:47:17,500 - DEBUG - AccountMongoDBService - Entering find_account_hist_by_account_id
+2020-10-09 12:47:17,500 - INFO - AccountMongoDBService - finding account history by account id: 1234567890
+2020-10-09 12:47:17,500 - DEBUG - AccountMongoDBService - Exiting find_account_hist_by_account_id
+2020-10-09 12:47:17,561 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f8093f421b7db1b27953977'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:46:44', 'amount': '-$5.00', 'balance': '-$4.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 46, 44, 993000)}
+2020-10-09 12:47:17,561 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f8093f421b7db1b27953976'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:46:44', 'amount': '-$20.00', 'balance': '$1.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 46, 44, 904000)}
+2020-10-09 12:47:17,562 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f8093ef21b7db1b27953975'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:46:39', 'amount': '$2.00', 'balance': '$21.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 46, 39, 152000)}
+2020-10-09 12:47:17,562 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f8093ce21b7db1b27953974'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:46:06', 'amount': '$19.00', 'balance': '$19.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 46, 6, 848000)}
+2020-10-09 12:47:17,562 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f8093bf21b7db1b27953973'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:45:51', 'amount': '$25.00', 'balance': '$0.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 45, 51, 815000)}
+2020-10-09 12:47:17,562 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f80923162bd950c387578f4'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:39:13', 'amount': '-$5.00', 'balance': '-$25.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 39, 13, 149000)}
+2020-10-09 12:47:17,562 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f80923162bd950c387578f3'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:39:13', 'amount': '-$940.00', 'balance': '-$20.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 39, 13, 61000)}
+2020-10-09 12:47:17,563 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f80921962bd950c387578f2'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:38:49', 'amount': '-$20.00', 'balance': '$920.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 38, 49, 551000)}
+2020-10-09 12:47:17,563 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f8091793b6d315992452fac'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:36:09', 'amount': '-$20.00', 'balance': '$960.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 36, 9, 800000)}
+2020-10-09 12:47:17,563 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f808f53e029d5f411fbcc9e'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:26:59', 'amount': '-$9980.00', 'balance': '$980.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 26, 59, 287000)}
+2020-10-09 12:47:17,563 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f808f4fe029d5f411fbcc9d'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:26:55', 'amount': '$10000.00', 'balance': '$10960.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 26, 55, 650000)}
+2020-10-09 12:47:17,563 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f808f46e029d5f411fbcc9c'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:26:46', 'amount': '$20.00', 'balance': '$960.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 26, 46, 337000)}
+2020-10-09 12:47:17,564 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f808f3fe029d5f411fbcc9b'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:26:39', 'amount': '-$20.00', 'balance': '$940.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 26, 39, 540000)}
+2020-10-09 12:47:17,564 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f808c9bd0ac60a0aa9f48e5'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '16:15:23', 'amount': '-$20.00', 'balance': '$960.00', 'created_date': datetime.datetime(2020, 10, 9, 16, 15, 23, 218000)}
+2020-10-09 12:47:17,564 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f8078425ac2737624b6f9a6'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '14:48:34', 'amount': '-$20.00', 'balance': '$980.00', 'created_date': datetime.datetime(2020, 10, 9, 14, 48, 34, 419000)}
+2020-10-09 12:47:17,564 - DEBUG - AccountOperations - account_history current iteration:{'_id': ObjectId('5f8078025ac2737624b6f9a5'), 'account_id': '1234567890', 'date': '2020-10-09', 'time': '14:47:30', 'amount': '$1000.00', 'balance': '$1000.00', 'created_date': datetime.datetime(2020, 10, 9, 14, 47, 30, 94000)}
+2020-10-09 12:47:17,565 - DEBUG - AccountOperations - Exiting history
+2020-10-09 12:47:17,565 - DEBUG - main - Exited main program loop.
+2020-10-09 12:47:17,565 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 12:47:17,565 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 12:47:17,565 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 12:49:17,566 - DEBUG - SessionTimer - session interval elapsed
+2020-10-09 12:49:17,566 - DEBUG - Authorization - Entering logout
+2020-10-09 12:49:17,566 - INFO - Authorization - Account 1234567890 logged out.
+2020-10-09 12:49:17,566 - DEBUG - Authorization - exiting logout
+2020-10-09 12:51:09,347 - DEBUG - main - user entered args at prompt 
+2020-10-09 12:51:09,347 - DEBUG - main - command parsed to
+2020-10-09 12:51:09,347 - DEBUG - main - Exited main program loop.
+2020-10-09 13:01:26,011 - DEBUG - AccountMongoDBService - Initialized logger for AccountMongoDBService
+2020-10-09 13:01:26,095 - DEBUG - Authorization - Initialized logger for Authorization
+2020-10-09 13:01:26,095 - DEBUG - AccountOperations - Initialized logger for AccountOperations
+2020-10-09 13:01:26,095 - DEBUG - main - Application Started.
+2020-10-09 13:01:26,096 - DEBUG - main - Entering main loop
+2020-10-09 16:31:38,460 - DEBUG - AccountMongoDBService - Initialized logger for AccountMongoDBService
+2020-10-09 16:31:50,675 - DEBUG - Authorization - Initialized logger for Authorization
+2020-10-09 16:31:50,676 - DEBUG - AccountOperations - Initialized logger for AccountOperations
+2020-10-09 16:31:50,677 - DEBUG - main - Application Started.
+2020-10-09 16:31:50,677 - DEBUG - main - Entering main loop
+2020-10-09 16:32:01,343 - DEBUG - main - user entered args at prompt authorize 1234567890
+2020-10-09 16:32:01,344 - DEBUG - main - command parsed toauthorize
+2020-10-09 16:32:01,344 - INFO - main - authorizing with input['authorize', '1234567890']
+2020-10-09 16:32:01,345 - DEBUG - main - Exited main program loop.
+2020-10-09 16:32:07,008 - DEBUG - main - user entered args at prompt authorize 1234567890
+2020-10-09 16:32:07,008 - DEBUG - main - command parsed toauthorize
+2020-10-09 16:32:07,008 - INFO - main - authorizing with input['authorize', '1234567890']
+2020-10-09 16:32:07,009 - DEBUG - main - Exited main program loop.
+2020-10-09 16:32:17,054 - DEBUG - main - user entered args at prompt authorize 1234567890 1234
+2020-10-09 16:32:17,055 - DEBUG - main - command parsed toauthorize
+2020-10-09 16:32:17,056 - INFO - main - authorizing with input['authorize', '1234567890', '1234']
+2020-10-09 16:32:17,056 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 16:32:17,056 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 16:32:17,056 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 16:32:17,056 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 16:32:17,230 - INFO - Authorization - Successfully authorized: {'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('90001.1111111')}
+2020-10-09 16:32:17,230 - DEBUG - Authorization - Exiting attempt_auth
+2020-10-09 16:32:17,230 - DEBUG - main - Exited main program loop.
+2020-10-09 16:32:17,231 - DEBUG - SessionTimer - initializing session timer: interval[120]
+2020-10-09 16:32:17,231 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 16:32:19,343 - DEBUG - main - user entered args at prompt balance
+2020-10-09 16:32:19,343 - DEBUG - main - command parsed tobalance
+2020-10-09 16:32:19,343 - DEBUG - AccountOperations - Entering balance
+2020-10-09 16:32:19,343 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('90001.1111111')}
+2020-10-09 16:32:19,344 - DEBUG - AccountOperations - printing account balance:$90001.11
+2020-10-09 16:32:19,344 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 16:32:19,344 - DEBUG - main - Exited main program loop.
+2020-10-09 16:32:19,344 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 16:32:19,344 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 16:32:19,345 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 16:32:24,719 - DEBUG - main - user entered args at prompt withdraw 10000
+2020-10-09 16:32:24,720 - DEBUG - main - command parsed towithdraw
+2020-10-09 16:32:24,720 - DEBUG - AccountOperations - Entering withdraw
+2020-10-09 16:32:24,720 - DEBUG - AccountOperations - valid input
+2020-10-09 16:32:24,720 - INFO - AccountOperations - account overdrawn: False
+2020-10-09 16:32:24,720 - INFO - AccountOperations - The machine cannot fulfill the requested withdrawal amount:$10000.00
+2020-10-09 16:32:24,720 - INFO - AccountOperations - Adjusted withdrawal amount to machine's available contents: $10000.00
+2020-10-09 16:32:24,726 - DEBUG - AccountMongoDBService - Entering save_transaction
+2020-10-09 16:32:24,726 - INFO - AccountMongoDBService - Saving account balance [80001.1111111] for account [1234567890]
+2020-10-09 16:32:24,760 - INFO - AccountOperations - Withdrawal successful for account: 1234567890
+2020-10-09 16:32:24,761 - DEBUG - AccountMongoDBService - Entering update_history
+2020-10-09 16:32:24,762 - DEBUG - AccountMongoDBService - splitting current_time_str on space: 2020-10-09 20:32:24
+2020-10-09 16:32:24,762 - DEBUG - AccountMongoDBService - datetime_arr: ['2020-10-09', '20:32:24']
+2020-10-09 16:32:24,762 - INFO - AccountMongoDBService - Inserting to account_history for account 1234567890
+2020-10-09 16:32:24,762 - DEBUG - AccountMongoDBService - insert payload: {'account_id': '1234567890', 'date': '2020-10-09', 'time': '20:32:24', 'amount': '-$10000.00', 'balance': '$80001.11', 'created_date': datetime.datetime(2020, 10, 9, 20, 32, 24, 761545, tzinfo=datetime.timezone.utc)}
+2020-10-09 16:32:24,797 - DEBUG - AccountMongoDBService - account_history insert complete with response5f80c8d84e70397f9abb55b1
+2020-10-09 16:32:24,797 - DEBUG - AccountMongoDBService - Exiting update_history
+2020-10-09 16:32:24,797 - DEBUG - Authorization - Entering refresh
+2020-10-09 16:32:24,797 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 16:32:24,798 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 16:32:24,798 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 16:32:24,820 - DEBUG - Authorization - Exiting refresh
+2020-10-09 16:32:24,820 - DEBUG - AccountOperations - Entering balance
+2020-10-09 16:32:24,820 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('80001.1111111')}
+2020-10-09 16:32:24,821 - DEBUG - AccountOperations - printing account balance:$80001.11
+2020-10-09 16:32:24,821 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 16:32:24,821 - DEBUG - AccountOperations - Exiting withdraw
+2020-10-09 16:32:24,821 - DEBUG - main - Exited main program loop.
+2020-10-09 16:32:24,821 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 16:32:24,822 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 16:32:24,822 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 16:32:36,431 - DEBUG - main - user entered args at prompt end
+2020-10-09 16:32:36,431 - DEBUG - main - command parsed toend
+2020-10-09 16:32:36,432 - DEBUG - main - End command received, breaking out of main loop
+2020-10-09 16:32:36,432 - DEBUG - main - Application terminated.
+2020-10-09 16:32:41,925 - DEBUG - AccountMongoDBService - Initialized logger for AccountMongoDBService
+2020-10-09 16:32:54,087 - DEBUG - Authorization - Initialized logger for Authorization
+2020-10-09 16:32:54,087 - DEBUG - AccountOperations - Initialized logger for AccountOperations
+2020-10-09 16:32:54,087 - DEBUG - main - Application Started.
+2020-10-09 16:32:54,087 - DEBUG - main - Entering main loop
+2020-10-09 16:33:02,575 - DEBUG - main - user entered args at prompt authorize 1234567890 1234
+2020-10-09 16:33:02,575 - DEBUG - main - command parsed toauthorize
+2020-10-09 16:33:02,575 - INFO - main - authorizing with input['authorize', '1234567890', '1234']
+2020-10-09 16:33:02,575 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 16:33:02,576 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 16:33:02,576 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 16:33:02,576 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 16:33:02,758 - INFO - Authorization - Successfully authorized: {'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('80001.1111111')}
+2020-10-09 16:33:02,758 - DEBUG - Authorization - Exiting attempt_auth
+2020-10-09 16:33:02,759 - DEBUG - main - Exited main program loop.
+2020-10-09 16:33:02,759 - DEBUG - SessionTimer - initializing session timer: interval[120]
+2020-10-09 16:33:02,759 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 16:33:06,743 - DEBUG - main - user entered args at prompt withdraw 10000
+2020-10-09 16:33:06,743 - DEBUG - main - command parsed towithdraw
+2020-10-09 16:33:06,743 - DEBUG - AccountOperations - Entering withdraw
+2020-10-09 16:33:06,743 - DEBUG - AccountOperations - valid input
+2020-10-09 16:33:06,743 - INFO - AccountOperations - account overdrawn: False
+2020-10-09 16:33:06,743 - INFO - AccountOperations - The machine cannot fulfill the requested withdrawal amount:$10000.00
+2020-10-09 16:33:06,744 - INFO - AccountOperations - Adjusted withdrawal amount to machine's available contents: $10000.00
+2020-10-09 16:33:06,744 - DEBUG - AccountMongoDBService - Entering save_transaction
+2020-10-09 16:33:06,744 - INFO - AccountMongoDBService - Saving account balance [70001.1111111] for account [1234567890]
+2020-10-09 16:33:06,783 - INFO - AccountOperations - Withdrawal successful for account: 1234567890
+2020-10-09 16:33:06,783 - DEBUG - AccountMongoDBService - Entering update_history
+2020-10-09 16:33:06,783 - DEBUG - AccountMongoDBService - splitting current_time_str on space: 2020-10-09 20:33:06
+2020-10-09 16:33:06,783 - DEBUG - AccountMongoDBService - datetime_arr: ['2020-10-09', '20:33:06']
+2020-10-09 16:33:06,784 - INFO - AccountMongoDBService - Inserting to account_history for account 1234567890
+2020-10-09 16:33:06,784 - DEBUG - AccountMongoDBService - insert payload: {'account_id': '1234567890', 'date': '2020-10-09', 'time': '20:33:06', 'amount': '-$10000.00', 'balance': '$70001.11', 'created_date': datetime.datetime(2020, 10, 9, 20, 33, 6, 783765, tzinfo=datetime.timezone.utc)}
+2020-10-09 16:33:06,820 - DEBUG - AccountMongoDBService - account_history insert complete with response5f80c90297aafe921be91e17
+2020-10-09 16:33:06,820 - DEBUG - AccountMongoDBService - Exiting update_history
+2020-10-09 16:33:06,820 - DEBUG - Authorization - Entering refresh
+2020-10-09 16:33:06,820 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 16:33:06,820 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 16:33:06,820 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 16:33:06,843 - DEBUG - Authorization - Exiting refresh
+2020-10-09 16:33:06,843 - DEBUG - AccountOperations - Entering balance
+2020-10-09 16:33:06,844 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('70001.1111111')}
+2020-10-09 16:33:06,844 - DEBUG - AccountOperations - printing account balance:$70001.11
+2020-10-09 16:33:06,844 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 16:33:06,844 - DEBUG - AccountOperations - Exiting withdraw
+2020-10-09 16:33:06,844 - DEBUG - main - Exited main program loop.
+2020-10-09 16:33:06,844 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 16:33:06,844 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 16:33:06,845 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 16:33:39,151 - DEBUG - main - user entered args at prompt 
+2020-10-09 16:33:39,152 - DEBUG - main - command parsed to
+2020-10-09 16:33:39,152 - DEBUG - main - Exited main program loop.
+2020-10-09 16:33:39,152 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 16:33:39,152 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 16:33:39,152 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 16:33:46,864 - DEBUG - main - user entered args at prompt logout
+2020-10-09 16:33:46,864 - DEBUG - main - command parsed tologout
+2020-10-09 16:33:46,864 - DEBUG - Authorization - Entering logout
+2020-10-09 16:33:46,864 - INFO - Authorization - Account 1234567890 logged out.
+2020-10-09 16:33:46,864 - DEBUG - Authorization - exiting logout
+2020-10-09 16:33:46,864 - DEBUG - main - Exited main program loop.
+2020-10-09 16:34:03,447 - DEBUG - main - user entered args at prompt authorize 1234567890 1234
+2020-10-09 16:34:03,448 - DEBUG - main - command parsed toauthorize
+2020-10-09 16:34:03,448 - INFO - main - authorizing with input['authorize', '1234567890', '1234']
+2020-10-09 16:34:03,448 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 16:34:03,448 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 16:34:03,448 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 16:34:03,448 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 16:34:03,478 - INFO - Authorization - Successfully authorized: {'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('100.00')}
+2020-10-09 16:34:03,478 - DEBUG - Authorization - Exiting attempt_auth
+2020-10-09 16:34:03,478 - DEBUG - main - Exited main program loop.
+2020-10-09 16:34:03,478 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 16:34:03,479 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 16:34:03,479 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 16:34:06,903 - DEBUG - main - user entered args at prompt balance
+2020-10-09 16:34:06,904 - DEBUG - main - command parsed tobalance
+2020-10-09 16:34:06,904 - DEBUG - AccountOperations - Entering balance
+2020-10-09 16:34:06,904 - DEBUG - AccountOperations - Found account:{'_id': ObjectId('5f7fd756affcef0d99fbb045'), 'account_id': '1234567890', 'pin': '1234', 'balance': Decimal128('100.00')}
+2020-10-09 16:34:06,904 - DEBUG - AccountOperations - printing account balance:$100.00
+2020-10-09 16:34:06,904 - DEBUG - AccountOperations - Exiting balance
+2020-10-09 16:34:06,904 - DEBUG - main - Exited main program loop.
+2020-10-09 16:34:06,905 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 16:34:06,905 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 16:34:06,905 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 16:34:12,719 - DEBUG - main - user entered args at prompt withdraw 80
+2020-10-09 16:34:12,720 - DEBUG - main - command parsed towithdraw
+2020-10-09 16:34:12,720 - DEBUG - AccountOperations - Entering withdraw
+2020-10-09 16:34:12,720 - DEBUG - AccountOperations - valid input
+2020-10-09 16:34:12,720 - INFO - AccountOperations - account overdrawn: False
+2020-10-09 16:34:12,720 - DEBUG - main - Exited main program loop.
+2020-10-09 16:34:12,720 - DEBUG - SessionTimer - refreshing session timer
+2020-10-09 16:34:12,720 - DEBUG - SessionTimer - session timer refreshed
+2020-10-09 16:34:12,722 - DEBUG - SessionTimer - session timer countdown started.
+2020-10-09 16:34:16,351 - DEBUG - main - user entered args at prompt end
+2020-10-09 16:34:16,351 - DEBUG - main - command parsed toend
+2020-10-09 16:34:16,351 - DEBUG - main - End command received, breaking out of main loop
+2020-10-09 16:34:16,352 - DEBUG - main - Application terminated.
+2020-10-09 16:34:20,902 - DEBUG - AccountMongoDBService - Initialized logger for AccountMongoDBService
+2020-10-09 16:34:33,055 - DEBUG - Authorization - Initialized logger for Authorization
+2020-10-09 16:34:33,055 - DEBUG - AccountOperations - Initialized logger for AccountOperations
+2020-10-09 16:34:33,055 - DEBUG - main - Application Started.
+2020-10-09 16:34:33,055 - DEBUG - main - Entering main loop
+2020-10-09 16:34:52,847 - DEBUG - main - user entered args at prompt authorize 1234567890 1234
+2020-10-09 16:34:52,847 - DEBUG - main - command parsed toauthorize
+2020-10-09 16:34:52,848 - INFO - main - authorizing with input['authorize', '1234567890', '1234']
+2020-10-09 16:34:52,848 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 16:34:52,848 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 16:34:52,848 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 16:34:52,848 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 16:35:30,602 - DEBUG - AccountMongoDBService - Initialized logger for AccountMongoDBService
+2020-10-09 16:35:42,815 - DEBUG - Authorization - Initialized logger for Authorization
+2020-10-09 16:35:42,815 - DEBUG - AccountOperations - Initialized logger for AccountOperations
+2020-10-09 16:35:42,815 - DEBUG - main - Application Started.
+2020-10-09 16:35:42,815 - DEBUG - main - Entering main loop
+2020-10-09 16:35:49,376 - DEBUG - main - user entered args at prompt authorize 1234567890 1234
+2020-10-09 16:35:49,376 - DEBUG - main - command parsed toauthorize
+2020-10-09 16:35:49,376 - INFO - main - authorizing with input['authorize', '1234567890', '1234']
+2020-10-09 16:35:49,376 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 16:35:49,376 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 16:35:49,376 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 16:35:49,377 - DEBUG - AccountMongoDBService - Exiting find_one_account
+2020-10-09 16:38:01,978 - DEBUG - AccountMongoDBService - Initialized logger for AccountMongoDBService
+2020-10-09 16:38:14,177 - DEBUG - Authorization - Initialized logger for Authorization
+2020-10-09 16:38:14,177 - DEBUG - AccountOperations - Initialized logger for AccountOperations
+2020-10-09 16:38:14,177 - DEBUG - main - Application Started.
+2020-10-09 16:38:14,177 - DEBUG - main - Entering main loop
+2020-10-09 16:38:21,248 - DEBUG - main - user entered args at prompt authorize 1234567890 1234
+2020-10-09 16:38:21,248 - DEBUG - main - command parsed toauthorize
+2020-10-09 16:38:21,248 - INFO - main - authorizing with input['authorize', '1234567890', '1234']
+2020-10-09 16:38:21,248 - DEBUG - Authorization - Entering attempt_auth
+2020-10-09 16:38:21,248 - DEBUG - AccountMongoDBService - Entering find_one_account
+2020-10-09 16:38:21,248 - INFO - AccountMongoDBService - finding account with params{'account_id': '1234567890', 'pin': '1234'}
+2020-10-09 16:38:21,248 - DEBUG - AccountMongoDBService - Exiting find_one_account

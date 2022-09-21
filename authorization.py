@@ -88,15 +88,3 @@ class Authorization:
             self.logger.info("Successfully authorized: " + str(account))
         self.logger.debug("Exiting attempt_auth")
         
-#TODO: write these tests
-#test when account dao is None and authorization is None should fail auth and return None
-    
-#test when account dao is valid and authorization is None should fail auth and return None
-    
-#test when account dao is None and authorization is valid should fail auth and return None
-    
-#test when account_dao is valid and account id invalid should fail auth and return None
-
-#test when account_dao is valid and pin is invalid should fail auth and return None
-    
-#test when account_dao is valid and authorization is valid should return Account
